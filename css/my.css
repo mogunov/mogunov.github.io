@@ -1,0 +1,9 @@
+@font-face {
+    font-family: PressStart2P;
+    src: url(PressStart2P.ttf);
+}
+
+*
+{
+    font-family: PressStart2P !important;
+}
