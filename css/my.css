@@ -1,9 +1,62 @@
-@font-face {
-    font-family: PressStart2P;
-    src: url(PressStart2P.ttf);
+* {
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
-*
+body {
+  background-image: url("../img/background.png");
+}
+
+*::selection {
+  background: red;
+}
+
+*::-moz-selection {
+  background: red;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 90%;
+  color: #FFFFFF;
+  font-size: 20px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 20px;
+}
+
+.container p {
+  text-indent: 25px;
+}
+
+.container h2 {
+  margin-bottom: 0px;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.container h1 {
+  background-color: #111;
+}
+
+.container table td {
+  padding: 5px;
+}
+
+.container a {
+  text-decoration: underline;
+  color: #FFFFFF;
+}
+
+.container a:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.no-top-margin {
+  margin-top: 0px;
+}
+
+.no-bottom-margin
 {
-    font-family: PressStart2P !important;
+  margin-bottom: 0px;
 }

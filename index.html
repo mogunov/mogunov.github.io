@@ -1,26 +1,122 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        
-        <meta charset="utf-8">
-        
-        <!-- redirect to https -->
-        <script>
-            var host = "mogunov.github.io";
-            if ((host == window.location.host) && (window.location.protocol != "https:"))
-                window.location.protocol = "https";
-        </script>
-        
-        <title>Andrey Mogunov</title>
-        
-        <!--CSS file-->
-        <link rel="stylesheet" href="css/my.css">
-        <!-- favicon file-->
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
-    </head>
-    <body>
-        <div>
-            <h1><center>Сайт находится в разработке.<br>;(((</center></h1>
-        </div>
-    </body>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- redirect to https -->
+    <script>
+      var host = "mogunov.github.io";
+      if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+    </script>
+    
+    <title>Andrey Mogunov</title>
+
+    <!-- font -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+    <!--CSS file-->
+    <link rel="stylesheet" href="css/my.css">
+    
+    <!-- favicon file-->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    
+    <script>
+      $(document).ready(
+        function() {
+          
+          $("html").niceScroll();
+          
+          $('a[href^="#"], a[href^="."]').click( function(){ 
+            var scroll_el = $(this).attr('href');
+            if ($(scroll_el).length != 0) {
+              $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+            }
+            return false; // выключаем стандартное действие
+          })
+        }
+      );
+  </script>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Персональный сайт Могунова Андрея.</h1>
+    </div>
+
+    <div class="container">
+      <a href="#me">Я</a>;
+      <a href="#skills">Навыки</a>;
+      <a href="#cv">Резюме</a>;
+      <a href="#contacts">Контакты</a>;
+    </div>
+
+    <div class="container" id="me">
+      <h2>Обо мне:</h2>
+      <ul>
+        <li>Студент 4 курса БГТУ "ВОЕНМЕХ";</li>
+        <li>Люблю программировать;</li>
+        <li>Плохое чувство юмора;</li>
+        <li>Хочу мотоцикл;</li>
+      </ul>
+    </div>
+
+    <div class="container" id="skills">
+      <h2>Мои навыки:</h2>
+      <p class="no-top-margin">(относительно позиции junior'a)</p>
+
+      <table border="1">
+        <thead>
+          <tr>
+            <td><b>Искусство</b></td>
+            <td><b>Владение</b>*</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>C/C++</td>
+            <td>9.9 из 10</td>
+          </tr>
+          <tr>
+            <td>C#</td>
+            <td>8 из 10</td>
+          </tr>
+          <tr>
+            <td>HTML5</td>
+            <td>8 из 10</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>7 из 10</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><i>*приведённые выше характеристики являются сугубо субъективными и носят информационный характер.</i></p>
+    
+      <h2>Подробнее:</h2>
+      <p>Ниже приведён список основных технологий, языков программирования/разметки, IDE, ОС, с которыми мне приходилось сталкиваться и в которых я что-то понимаю:</p>
+      <p class="no-bottom-margin">С++, C++14, C, C#, WinForms, WPF, Microsoft Visual Studio 2008/2012/2015, Microsoft SQL Server;</p>
+      <p class="no-top-margin no-bottom-margin">HTML, HTML5, JavaScript, PHP, Perl, NetBeans;</p>
+      <p class="no-top-margin no-bottom-margin">Microsoft Windows 7/8/8.1/10, Ubuntu;</p>
+      
+      <p>Постепенно этот список будет дополняться.</p>
+    </div>
+    
+    <div class="container" id="cv">
+      <h2>Моё резюме:</h2>
+      <p>Если Вам вдруг понадобилось моё резюме в формате pdf - скоро забрать его можно будет <a href="#">здесь</a>.</p>
+    </div>
+
+    <div class="container" id="contacts">
+      <h2>Контакты:</h2>
+      <p class="no-bottom-margin"><a href="mailto:andrew.mogunov@gmail.com?subject=mogunov.github.io"><b>Написать письмо</b></a> - пишите мне с любыми вопросами/предложениями.</p>
+      <p class="no-top-margin no-bottom-margin"><a href="https://github.com/mogunov"><b>Мой профиль на GitHub</b></a> - постепенно будут заливаться мои проекты.</p>
+    </div>
+
+  </body>
+
 </html>
